@@ -7,12 +7,12 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './component/App'
 
 //import reducer
-import todoApp from './reducers/todos'
+import todoApp from './reducers'
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-const store = createStore(todoApp)
+let store = createStore(todoApp)
 store.subscribe(() => {
     console.log("Update Store: ",  store.getState())
 }) 
